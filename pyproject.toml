@@ -66,10 +66,11 @@ cu124 = [
     "torch @ https://download.pytorch.org/whl/cu124/torch-2.4.1%2Bcu124-cp311-cp311-linux_x86_64.whl ; platform_system == 'Linux' and platform_machine == 'x86_64' and python_version == '3.11'",
 
     # Exl2
-    #"exllamav2 @ https://github.com/turboderp/exllamav2/releases/download/v0.2.3/exllamav2-0.2.3+cu124.torch2.4.0-cp312-cp312-win_amd64.whl ; platform_system == 'Windows' and python_version == '3.12'",
-    # "exllamav2 @ https://github.com/turboderp/exllamav2/releases/download/v0.2.3/exllamav2-0.2.3+cu124.torch2.4.0-cp311-cp311-win_amd64.whl ; platform_system == 'Windows' and python_version == '3.11'",
-    # "exllamav2 @ https://github.com/turboderp/exllamav2/releases/download/v0.2.3/exllamav2-0.2.3+cu124.torch2.4.0-cp312-cp312-linux_x86_64.whl ; platform_system == 'Linux' and platform_machine == 'x86_64' and python_version == '3.12'",
-    # "exllamav2 @ https://github.com/turboderp/exllamav2/releases/download/v0.2.3/exllamav2-0.2.3+cu124.torch2.4.0-cp311-cp311-linux_x86_64.whl ; platform_system == 'Linux' and platform_machine == 'x86_64' and python_version == '3.11'",
+    "exllamav2 @ https://github.com/choronz/exllama/releases/download/v0.2.3/exllamav2-0.2.3+cu124.torch2.4.0-cp312-cp312-win_amd64.whl ; platform_system == 'Windows' and python_version == '3.12'",
+    "exllamav2 @ https://github.com/choronz/exllama/releases/download/v0.2.3/exllamav2-0.2.3+cu124.torch2.4.0-cp311-cp311-win_amd64.whl ; platform_system == 'Windows' and python_version == '3.11'",
+    
+    "exllamav2 @ https://github.com/choronz/exllama/releases/download/v0.2.3/exllamav2-0.2.3+cu124.torch2.4.0-cp312-cp312-linux_x86_64.whl ; platform_system == 'Linux' and platform_machine == 'x86_64' and python_version == '3.12'"
+    "exllamav2 @ https://github.com/choronz/exllama/releases/download/v0.2.3/exllamav2-0.2.3+cu124.torch2.4.0-cp311-cp311-linux_x86_64.whl ; platform_system == 'Linux' and platform_machine == 'x86_64' and python_version == '3.11'"
 
     # Windows FA2 from https://github.com/bdashore3/flash-attention/releases
     "flash_attn @ https://github.com/bdashore3/flash-attention/releases/download/v2.6.3/flash_attn-2.6.3+cu123torch2.4.0cxx11abiFALSE-cp312-cp312-win_amd64.whl ; platform_system == 'Windows' and python_version == '3.12'",
