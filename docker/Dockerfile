@@ -1,16 +1,18 @@
 FROM nvidia/cuda:12.4.1-runtime-ubuntu22.04
 
-# Install system dependencies
-RUN apt-get update -y && apt-get install -y software-properties-common git curl && add-apt-repository ppa:deadsnakes/ppa
-
-RUN apt-get install -y --no-install-recommends \
-    software-properties-common \
-    build-essential \
-    curl \
-    ca-certificates \
-    python3.12 \
-    python3.12-dev\
-    python3-pip \
+# Install Python and other dependencies   ppa:deadsnakes/ppa
+RUN echo 'tzdata tzdata/Areas select America' | debconf-set-selections \
+    && echo 'tzdata tzdata/Zones/America select Los_Angeles' | debconf-set-selections ca-certificates \
+    && apt-get update -y \
+    && apt-get install -y ccache software-properties-common git curl build-essential ca-certificates \
+    && add-apt-repository ppa:fkrull/deadsnakes \
+    && apt-get update -y \
+    && apt-get install -y python${PYTHON_VERSION} python${PYTHON_VERSION}-dev python${PYTHON_VERSION}-venv \
+    && update-alternatives --install /usr/bin/python3 python3 /usr/bin/python${PYTHON_VERSION} 1 \
+    && update-alternatives --set python3 /usr/bin/python${PYTHON_VERSION} \
+    && ln -sf /usr/bin/python${PYTHON_VERSION}-config /usr/bin/python3-config \
+    && curl -sS https://bootstrap.pypa.io/get-pip.py | python${PYTHON_VERSION} \
+    && python3 --version && python3 -m pip --version
     && rm -rf /var/lib/apt/lists/*
 
 # Upgrade pip
