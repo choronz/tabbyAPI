@@ -27,7 +27,7 @@ RUN rm pyproject.toml
 COPY . .
 
 # Make port 5000 available to the world outside this container
-EXPOSE 5000
+EXPOSE 8000
 
 # Set the entry point
 ENTRYPOINT ["python3"]

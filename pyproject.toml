@@ -14,7 +14,7 @@ py-modules = []
 name = "tabbyAPI"
 version = "0.0.1"
 description = "An OAI compatible exllamav2 API that's both lightweight and fast"
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "fastapi-slim >= 0.110.0",
     "pydantic >= 2.0.0",
@@ -58,6 +58,7 @@ extras = [
 dev = [
     "ruff == 0.6.5"
 ]
+
 cu124 = [
     # Torch (Extra index URLs not support in pyproject.toml)
     "torch @ https://download.pytorch.org/whl/cu124/torch-2.4.1%2Bcu124-cp312-cp312-win_amd64.whl ; platform_system == 'Windows' and python_version == '3.12'",
@@ -69,8 +70,8 @@ cu124 = [
     "exllamav2 @ https://github.com/choronz/exllama/releases/download/v0.2.3/exllamav2-0.2.3+cu124.torch2.4.0-cp312-cp312-win_amd64.whl ; platform_system == 'Windows' and python_version == '3.12'",
     "exllamav2 @ https://github.com/choronz/exllama/releases/download/v0.2.3/exllamav2-0.2.3+cu124.torch2.4.0-cp311-cp311-win_amd64.whl ; platform_system == 'Windows' and python_version == '3.11'",
     
-    "exllamav2 @ https://github.com/choronz/exllama/releases/download/v0.2.3/exllamav2-0.2.3+cu124.torch2.4.0-cp312-cp312-linux_x86_64.whl ; platform_system == 'Linux' and platform_machine == 'x86_64' and python_version == '3.12'"
-    "exllamav2 @ https://github.com/choronz/exllama/releases/download/v0.2.3/exllamav2-0.2.3+cu124.torch2.4.0-cp311-cp311-linux_x86_64.whl ; platform_system == 'Linux' and platform_machine == 'x86_64' and python_version == '3.11'"
+    "exllamav2 @ https://github.com/choronz/exllama/releases/download/v0.2.3/exllamav2-0.2.3+cu124.torch2.4.0-cp312-cp312-linux_x86_64.whl ; platform_system == 'Linux' and platform_machine == 'x86_64' and python_version == '3.12'",
+    "exllamav2 @ https://github.com/choronz/exllama/releases/download/v0.2.3/exllamav2-0.2.3+cu124.torch2.4.0-cp311-cp311-linux_x86_64.whl ; platform_system == 'Linux' and platform_machine == 'x86_64' and python_version == '3.11'",
 
     # Windows FA2 from https://github.com/bdashore3/flash-attention/releases
     "flash_attn @ https://github.com/bdashore3/flash-attention/releases/download/v2.6.3/flash_attn-2.6.3+cu123torch2.4.0cxx11abiFALSE-cp312-cp312-win_amd64.whl ; platform_system == 'Windows' and python_version == '3.12'",
@@ -125,7 +126,7 @@ exclude = [
 line-length = 88
 indent-width = 4
 
-# Assume Python 3.10
+# Assume Python 3.12
 target-version = "py312"
 
 [tool.ruff.lint]

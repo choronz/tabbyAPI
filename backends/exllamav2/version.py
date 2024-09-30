@@ -15,9 +15,7 @@ def check_exllama_version():
         "Or you can manually run a requirements update "
         "using the following command:\n\n"
         "For CUDA 12.1:\n"
-        "pip install --upgrade .[cu121]\n\n"
-        "For CUDA 11.8:\n"
-        "pip install --upgrade .[cu118]\n\n"
+        "pip install --upgrade .[cu124]\n\n"
         "For ROCm:\n"
         "pip install --upgrade .[amd]\n\n"
     )
