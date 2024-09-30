@@ -1,4 +1,5 @@
-FROM nvidia/cuda:12.4.1-runtime-ubuntu22.04
+FROM nvidia/cuda:12.4.1-devel-ubuntu22.04
+#FROM nvidia/cuda:12.4.1-runtime-ubuntu22.04
 
 # Install Python and other dependencies   ppa:deadsnakes/ppa
 RUN echo 'tzdata tzdata/Areas select America' | debconf-set-selections \
