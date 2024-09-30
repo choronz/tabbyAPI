@@ -2,10 +2,11 @@ FROM nvidia/cuda:12.4.1-runtime-ubuntu22.04
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    software-properties-common \
     build-essential \
     curl \
     ca-certificates \
-    python3.12 \
+    python3.12 python3.12-dev\
     python3-pip \
     && rm -rf /var/lib/apt/lists/*
 
