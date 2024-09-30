@@ -1,6 +1,10 @@
 FROM nvidia/cuda:12.4.1-devel-ubuntu22.04
 #FROM nvidia/cuda:12.4.1-runtime-ubuntu22.04
 
+ENV CUDA_VERSION=12.4.1
+ENV PYTHON_VERSION=3.12
+ENV DEBIAN_FRONTEND=noninteractive
+
 # Install Python and other dependencies   ppa:deadsnakes/ppa
 RUN echo 'tzdata tzdata/Areas select America' | debconf-set-selections \
     && echo 'tzdata tzdata/Zones/America select Los_Angeles' | debconf-set-selections ca-certificates \
