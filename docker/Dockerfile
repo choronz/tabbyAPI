@@ -1,6 +1,8 @@
 FROM nvidia/cuda:12.4.1-runtime-ubuntu22.04
 
 # Install system dependencies
+RUN add-apt-repository ppa:deadsnakes/ppa
+
 RUN apt-get update && apt-get install -y --no-install-recommends \
     software-properties-common \
     build-essential \
