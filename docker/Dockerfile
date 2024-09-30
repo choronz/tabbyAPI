@@ -1,5 +1,4 @@
-# Use an official CUDA runtime with Ubuntu as a parent image
-FROM nvidia/cuda:12.1.0-runtime-ubuntu22.04
+FROM nvidia/cuda:12.4.1-runtime-ubuntu22.04
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -19,8 +18,8 @@ WORKDIR /app
 # Get requirements
 COPY pyproject.toml .
 
-# Install packages specified in pyproject.toml cu121
-RUN pip3 install --no-cache-dir .[cu121]
+# Install packages specified in pyproject.toml cu124
+RUN pip3 install --no-cache-dir .[cu124]
 
 RUN rm pyproject.toml
 
